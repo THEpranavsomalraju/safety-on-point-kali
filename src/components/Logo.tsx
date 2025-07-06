@@ -16,7 +16,7 @@ export const Logo = () => {
         <img 
           src="/lovable-uploads/68426b37-a58e-4716-9b96-a22c01eade6c.png" 
           alt="kali" 
-          className="h-16 w-auto"
+          className="h-24 w-auto rounded-2xl"
         />
       </div>
     </div>

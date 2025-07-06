@@ -1,14 +1,14 @@
 import { useTypewriter } from '@/hooks/useTypewriter';
 
 const taglines = [
-  "Never walk down a sketchy street again",
-  "Your GPS doesn't care if you're scared", 
-  "Get home safely, not just quickly",
-  "Finally, navigation that gets it",
-  "Because 2 minutes saved isn't worth the risk",
-  "Built by women who've been there",
-  "Stop ignoring your gut feeling",
-  "The app that shouldn't have to exist"
+  "never walk down a sketchy street again",
+  "your gps doesn't care if you're scared", 
+  "get home safely, not just quickly",
+  "finally, navigation that gets it",
+  "because 2 minutes saved isn't worth the risk",
+  "built by women who've been there",
+  "stop ignoring your gut feeling",
+  "the app that shouldn't have to exist"
 ];
 
 export const Typewriter = () => {

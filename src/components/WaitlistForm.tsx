@@ -63,8 +63,8 @@ export const WaitlistForm = ({ onClose, isOpen }: WaitlistFormProps) => {
         {!isSuccess ? (
           <>
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold mb-2">Join the Waitlist</h2>
-              <p className="text-muted-foreground">Be the first to know when Kali launches</p>
+            <h2 className="text-2xl font-bold mb-2">join the waitlist</h2>
+            <p className="text-muted-foreground">be the first to know when kali launches</p>
             </div>
             
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -86,14 +86,14 @@ export const WaitlistForm = ({ onClose, isOpen }: WaitlistFormProps) => {
                   onClick={onClose}
                   className="flex-1 bg-transparent border-border hover:bg-muted"
                 >
-                  Cancel
+                  cancel
                 </Button>
                 <Button
                   type="submit"
                   disabled={isSubmitting}
                   className="flex-1 bg-primary hover:bg-secondary text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
                 >
-                  {isSubmitting ? 'Joining...' : 'Join Waitlist'}
+                  {isSubmitting ? 'joining...' : 'join waitlist'}
                 </Button>
               </div>
             </form>
@@ -105,15 +105,15 @@ export const WaitlistForm = ({ onClose, isOpen }: WaitlistFormProps) => {
                 <span className="text-primary-foreground text-xl">✓</span>
               </div>
             </div>
-            <h2 className="text-2xl font-bold mb-2">You're In!</h2>
+            <h2 className="text-2xl font-bold mb-2">you're in!</h2>
             <p className="text-muted-foreground mb-6">
-              Check your email for confirmation. We'll be in touch soon.
+              check your email for confirmation. we'll be in touch soon.
             </p>
             <Button 
               onClick={onClose}
               className="w-full bg-primary hover:bg-secondary text-primary-foreground"
             >
-              Close
+              close
             </Button>
           </div>
         )}

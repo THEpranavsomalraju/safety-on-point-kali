@@ -9,23 +9,23 @@ export const LearnMore = () => {
   const features = [
     {
       icon: Shield,
-      title: "Smart Safety Routing",
-      description: "AI-powered routing that considers safety factors like lighting, foot traffic, and recent incidents"
+      title: "smart safety routing",
+      description: "ai-powered routing that considers safety factors like lighting, foot traffic, and recent incidents"
     },
     {
       icon: Users,
-      title: "Community Reports", 
-      description: "Real-time safety updates from other users to keep everyone informed and protected"
+      title: "community reports", 
+      description: "real-time safety updates from other users to keep everyone informed and protected"
     },
     {
       icon: Brain,
-      title: "AI-Powered Rerouting",
-      description: "Intelligent system that automatically suggests safer alternatives when conditions change"
+      title: "ai-powered rerouting",
+      description: "intelligent system that automatically suggests safer alternatives when conditions change"
     },
     {
       icon: Zap,
-      title: "Real-time Adjustments",
-      description: "Dynamic route updates based on current conditions, time of day, and safety data"
+      title: "real-time adjustments",
+      description: "dynamic route updates based on current conditions, time of day, and safety data"
     }
   ];
 
@@ -47,7 +47,7 @@ export const LearnMore = () => {
           }`}>
             <div className="p-8">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold">About Kali</h2>
+                <h2 className="text-2xl font-bold">about kali</h2>
                 <Button
                   variant="ghost"
                   size="sm"
@@ -61,8 +61,8 @@ export const LearnMore = () => {
               <div className="space-y-6">
                 <div>
                   <p className="text-muted-foreground leading-relaxed">
-                    Kali is a safety-first navigation app designed for people who shouldn't have to choose 
-                    between getting somewhere fast and getting there safely. Built by women who understand 
+                    kali is a safety-first navigation app designed for people who shouldn't have to choose 
+                    between getting somewhere fast and getting there safely. built by women who understand 
                     the reality of navigating urban spaces.
                   </p>
                 </div>
@@ -84,10 +84,10 @@ export const LearnMore = () => {
                 </div>
 
                 <div className="pt-4 border-t border-border">
-                  <h3 className="font-semibold mb-2">Our Mission</h3>
+                  <h3 className="font-semibold mb-2">our mission</h3>
                   <p className="text-sm text-muted-foreground">
-                    Everyone deserves to feel safe while getting from point A to point B. 
-                    Kali uses technology to restore that fundamental right, one route at a time.
+                    everyone deserves to feel safe while getting from point a to point b. 
+                    kali uses technology to restore that fundamental right, one route at a time.
                   </p>
                 </div>
               </div>
