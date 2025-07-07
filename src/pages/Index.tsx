@@ -7,12 +7,13 @@ import { LearnMore } from '@/components/LearnMore';
 
 const Index = () => {
   const [showWaitlist, setShowWaitlist] = useState(false);
+  const [showLearnMore, setShowLearnMore] = useState(false);
 
   return (
     <div 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: 'url(/lovable-uploads/8732755e-c06a-4650-9733-f5f36ff6b0ee.png)',
+        backgroundImage: 'url(/lovable-uploads/d9596a57-25ed-4e96-b6c2-886ba69c7f4d.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -37,26 +38,26 @@ const Index = () => {
         <div className="animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'both' }}>
           <Button
             onClick={() => setShowWaitlist(true)}
-            variant="kali"
+            variant="default"
             size="lg"
-            className="px-12 py-6 text-lg rounded-none"
-            style={{
-              boxShadow: '0 8px 32px hsl(var(--kali-purple) / 0.3)',
-            }}
+            className="px-12 py-6 text-lg bg-primary hover:bg-primary/90 text-primary-foreground font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             join waitlist
           </Button>
         </div>
 
         {/* Subtle encouragement text */}
-        <p className="text-muted-foreground text-sm mt-8 opacity-70 animate-fade-in" 
-           style={{ animationDelay: '1.5s', animationFillMode: 'both' }}>
+        <button 
+          onClick={() => setShowLearnMore(true)} 
+          className="text-muted-foreground text-sm mt-8 opacity-70 animate-fade-in hover:opacity-100 hover:text-foreground transition-all duration-300 hover:scale-105 cursor-pointer"
+          style={{ animationDelay: '1.5s', animationFillMode: 'both' }}
+        >
           be among the first to navigate safely
-        </p>
+        </button>
       </div>
 
       {/* Learn More button */}
-      <LearnMore />
+      <LearnMore isOpen={showLearnMore} onClose={() => setShowLearnMore(false)} onOpen={() => setShowLearnMore(true)} />
 
       {/* Waitlist Form */}
       <WaitlistForm 

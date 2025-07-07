@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Info, X, Shield, Users, Brain, Zap } from 'lucide-react';
 
-export const LearnMore = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export const LearnMore = ({ isOpen, onClose, onOpen }: { isOpen: boolean; onClose: () => void; onOpen: () => void }) => {
 
   const features = [
     {
@@ -31,14 +29,16 @@ export const LearnMore = () => {
 
   return (
     <>
-      <Button
-        variant="ghost"
-        size="sm"
-        onClick={() => setIsOpen(true)}
-        className="fixed top-6 right-6 w-10 h-10 rounded-full bg-card/10 border border-border/20 hover:bg-card/20 hover:border-border/40 transition-all duration-200 backdrop-blur-sm"
-      >
-        <Info className="w-4 h-4" />
-      </Button>
+      {!isOpen && (
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => onOpen()}
+          className="fixed top-6 right-6 w-10 h-10 rounded-full bg-card/10 border border-border/20 hover:bg-card/20 hover:border-border/40 transition-all duration-200 backdrop-blur-sm"
+        >
+          <Info className="w-4 h-4" />
+        </Button>
+      )}
 
       {isOpen && (
         <div className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 flex items-center justify-center p-4">
@@ -51,7 +51,7 @@ export const LearnMore = () => {
                 <Button
                   variant="ghost"
                   size="sm"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => onClose()}
                   className="w-8 h-8 rounded-full hover:bg-muted"
                 >
                   <X className="w-4 h-4" />
