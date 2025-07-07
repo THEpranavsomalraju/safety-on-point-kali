@@ -2,10 +2,11 @@ import { useTypewriter } from '@/hooks/useTypewriter';
 
 const taglines = [
   "your phone doesn't know you're scared",
-  "google maps has never been followed home",
+  "google maps has never been followed home", 
   "2 minutes faster isn't worth your life",
   "every woman knows this feeling",
-  "your gps has never walked alone at night"
+  "your gps has never walked alone at night",
+  "your fearless journey starts here"
 ];
 
 export const Typewriter = () => {

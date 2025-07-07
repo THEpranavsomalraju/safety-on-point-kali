@@ -10,9 +10,17 @@ export const useTypewriter = (
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
+  const [hasFinishedCycle, setHasFinishedCycle] = useState(false);
 
   useEffect(() => {
     if (texts.length === 0) return;
+
+    // If we've finished the cycle, stay on the last text
+    if (hasFinishedCycle) {
+      setDisplayText(texts[texts.length - 1]);
+      setIsCompleted(true);
+      return;
+    }
 
     const currentText = texts[currentIndex];
     
@@ -24,6 +32,13 @@ export const useTypewriter = (
         } else {
           // Finished typing current text
           setIsCompleted(true);
+          
+          // If this is the last tagline, don't delete it
+          if (currentIndex === texts.length - 1) {
+            setHasFinishedCycle(true);
+            return;
+          }
+          
           setTimeout(() => {
             setIsDeleting(true);
             setIsCompleted(false);
@@ -36,13 +51,13 @@ export const useTypewriter = (
         } else {
           // Finished deleting
           setIsDeleting(false);
-          setCurrentIndex((prev) => (prev + 1) % texts.length);
+          setCurrentIndex((prev) => prev + 1);
         }
       }
     }, isDeleting ? deleteSpeed : speed);
 
     return () => clearTimeout(timer);
-  }, [displayText, currentIndex, isDeleting, texts, speed, deleteSpeed, pauseTime]);
+  }, [displayText, currentIndex, isDeleting, texts, speed, deleteSpeed, pauseTime, hasFinishedCycle]);
 
   return { displayText, isCompleted };
 };
